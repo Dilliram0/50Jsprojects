@@ -1,0 +1,130 @@
+/* Using a soft, neutral background from your image */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: hsl(0, 0%, 94%); /* Slightly lighter for freshness */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: hsl(0, 0%, 25%);
+    margin-bottom: 20px;
+    font-weight: 300; /* Lighter font weight feels more "soothing" */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 70px;
+    background-color: white;
+    border-radius: 50px; /* From your original image */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    border: 1px solid #eee;
+}
+
+#display {
+    font-size: 5rem;
+    font-family: "Courier New", Courier, monospace; /* Monospace keeps numbers from jumping */
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Color Palette for Buttons */
+#start {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#stop {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+#reset {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+/* Hover effects for interaction */
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.95);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ... keep your previous styles above ... */
+
+/* Responsive Adjustments */
+
+/* For Tablets (Screens under 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 40px 30px;
+        width: 80%; /* Takes up more width on smaller screens */
+    }
+
+    #display {
+        font-size: 4rem; /* Slightly smaller text */
+    }
+}
+
+/* For Mobile Phones (Screens under 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 90%;
+        padding: 30px 15px;
+        border-radius: 30px; /* Smaller radius looks better on mobile */
+    }
+
+    #display {
+        font-size: 2.8rem; /* Significant reduction to prevent horizontal scrolling */
+        letter-spacing: -1px;
+    }
+
+    .controls {
+        flex-direction: column; /* Stack buttons vertically if they get too tight */
+        width: 100%;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%; /* Full width buttons are easier to tap with thumbs */
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+}
