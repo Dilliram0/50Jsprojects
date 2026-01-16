@@ -1,0 +1,72 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark mode */
+body.dark {
+    background-color: black;
+    color: white;
+}
+
+/* Toggle container */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+/* Hide checkbox */
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider background */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+/* Slider circle */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: black;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Checked state (WHITE toggle) */
+.toggle input:checked + .slider {
+    background-color: white;
+}
+
+.toggle input:checked + .slider::before {
+    transform: translateX(30px);
+    background-color: black;
+}
