@@ -1,6 +1,5 @@
 const form = document.querySelector('form');
 const taskList = document.querySelector('#task-list');
-const deleteBtn = document.querySelector('#delete')
 
 function addTask(task){
     let listItem = document.createElement('li');
