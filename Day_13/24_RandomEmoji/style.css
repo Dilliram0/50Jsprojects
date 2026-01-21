@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fa8072;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+h2{
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.section{
+    text-align: center;
+}
+
+.btn{
+    font-size: 5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #fb998e;
+    padding: 15px;
+    filter: grayscale();
+    transition: filter .3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover{
+    filter:grayscale(0)
+}
+
+.emoji-name{
+    font-weight: 800;
+    color: darkblue;
+}
