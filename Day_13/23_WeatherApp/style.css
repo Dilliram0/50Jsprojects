@@ -4,7 +4,7 @@
     box-sizing: border-box;
     border: none;
     outline: none;
-    font-family: sans-serif;
+    font-family: monospace;
 }
 
 body{
@@ -57,7 +57,7 @@ body{
 }
 
 .weather-body{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -114,4 +114,20 @@ body{
 .text span{
     font-size: 20px;
     font-weight: 700;
+}
+.location-not-found{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+.location-not-found img{
+    width: 80%;
+}
+.location-not-found h1{
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block-end: 20px;
 }
